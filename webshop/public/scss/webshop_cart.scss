@@ -204,44 +204,38 @@ body.product-page {
 		}
 	}
 }
-
 #products-list-area, #products-grid-area {
-	padding: 0 5px;
+    padding: 0 5px;
 }
 
 .list-row {
-	background-color: white;
-	padding-bottom: 1rem;
-	padding-top: 1.5rem !important;
-	border-radius: 8px;
-	border-bottom: 1px solid var(--gray-50);
+    background-color: white;
+    padding: 1.5rem 1rem 1rem 1rem; /* Combining padding properties for brevity */
+    border-radius: 8px;
+    border-bottom: 1px solid var(--gray-50);
+    transition: box-shadow 400ms; /* Moved transition to general state for consistency */
 
-	&:hover, &:focus-within {
-		box-shadow: 0px 16px 60px rgba(0, 0, 0, 0.08), 0px 8px 30px -20px rgba(0, 0, 0, 0.04);
-		transition: box-shadow 400ms;
+    &:hover, &:focus-within {
+        box-shadow: 0px 16px 60px rgba(0, 0, 0, 0.08), 
+                    0px 8px 30px -20px rgba(0, 0, 0, 0.04);
 
-		.btn-add-to-cart-list {
-			visibility: visible;
-		}
-		.like-action-list {
-			visibility: visible;
-		}
-		.btn-explore-variants {
-			visibility: visible;
-		}
-	}
+        .btn-add-to-cart-list, .like-action-list, .btn-explore-variants {
+            visibility: visible;
+        }
+    }
 
-	.product-code {
-		padding-top: 0 !important;
-	}
+    .product-code {
+        padding-top: 0 !important; /* !important is retained for specificity */
+    }
 
-	.btn-explore-variants {
-		min-width: 135px;
-		max-height: 30px;
-		float: right;
-		padding: 0.25rem 1rem;
-	}
+    .btn-explore-variants {
+        min-width: 135px;
+        max-height: 30px;
+        float: right;
+        padding: 0.25rem 1rem;
+    }
 }
+
 
 [data-doctype="Item Group"],
 #page-index {
